@@ -1,0 +1,8 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "description": "Movie API with Graphql",
+  "main": "index.js",
+  "repository": "https://github.com/jaeuk2274/movie-graphql.git",
+  "license": "MIT"
+}
