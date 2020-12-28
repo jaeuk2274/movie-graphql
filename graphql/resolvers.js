@@ -1,13 +1,14 @@
-const jaeuk = {
-  name: "jaeuk",
-  age: 28,
-  gender: "male"
-}
+import { getById, people } from './db';
 
 const resolvers = {
     Query: {
-      person: () => jaeuk
+      people: () => people,
+      person: (_, {id} ) => {
+        console.log(id);
+        console.log(typeof(id)); 
+        return getById(id);
     }
-  };
+  }
+}
   
-  export default resolvers;
+export default resolvers; 
