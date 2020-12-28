@@ -38,8 +38,6 @@ export const people = [
 ]   
 
 export const getById = id => {
-    console.log(typeof(people[0].id)); 
-    const filterPeople = people.filter(person => String(person.id) === String(id));
-    console.log(filterPeople[0]);
+    const filterPeople = people.filter(person => person.id === id);
     return filterPeople[0];
 }

@@ -1,14 +1,11 @@
 import { getById, people } from './db';
 
 const resolvers = {
-    Query: {
-      people: () => people,
-      person: (_, {id} ) => {
-        console.log(id);
-        console.log(typeof(id)); 
-        return getById(id);
-    }
+  Query: {
+    people: () => people,
+    person: (_, {id} ) => getById(id)
   }
 }
+
   
 export default resolvers; 
