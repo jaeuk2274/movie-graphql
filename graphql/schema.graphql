@@ -8,10 +8,12 @@ type Person {
 type Movie {
   id: Int!
   title: String!
-  rating: Int!
+  rating: Float!
+  summary: String!
+  language: String!
   medium_cover_image: String!
-  year: Int
-  genres: [String]
+  year: Int!
+  genres: [String]!
 
 }
 
