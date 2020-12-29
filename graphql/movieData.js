@@ -4,18 +4,18 @@ const API_URL = "https://yts.am/api/v2/list_movies.json?";
 export let movies = [
     {
       id: 0,
-      name: "Star Wars - The new one",
-      score: 1
+      title: "Star Wars - The new one",
+      rating: 1
     },
     {
       id: 1,
-      name: "Avengers - The new one",
-      score: 8 
+      title: "Avengers - The new one",
+      rating: 8 
     },
     {
       id: 2,
-      name: "The Godfather I",
-      score: 99
+      title: "The Godfather I",
+      rating: 99
     }
 ]
 
