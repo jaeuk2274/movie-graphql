@@ -14,7 +14,9 @@ type Movie {
   medium_cover_image: String!
   year: Int!
   genres: [String]!
-
+  url: String
+  description_intro: String
+  description_full: String
 }
 
 type Query {
@@ -22,6 +24,7 @@ type Query {
   person(id: Int!): Person
   movies(limit: Int, rating: Float): [Movie]!
   movie(id: Int!): Movie
+  suggestions(id: Int!): [Movie]!
 } 
 
 type Mutation {

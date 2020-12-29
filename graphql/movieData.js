@@ -23,11 +23,6 @@ export let movies = [
     }
 ]
 
-export const getById = id => {
-    const filterMovie = movies.filter(movie => movie.id === id);
-    return filterMovie[0];
-}
-
 export const deleteMovie = id => {
     const cleanedMovies = movies.filter(movie => movie.id !== id);
     if (movies.length > cleanedMovies.length) {
@@ -61,6 +56,34 @@ export const getMovies = async (limit, rating) => {
   });
   return movies;
 };
+
+export const getMovie = async id => {
+  const {
+    data: {
+      data: {movie}
+    }
+  } = await axios(MOVIE_DETAIL_URL, {
+    params: {
+      movie_id: id
+    }
+  });
+  return movie;
+}
+
+export const getSuggestions = async id => {
+  const {
+    data: {
+      data: {movies}
+    }
+  } = await axios(MOVIE_SUGGESTIONS_URL, {
+    params: {
+      movie_id: id
+    }
+  });
+  return movies;
+}
+
+
 
 
 // axios 와 fetch
